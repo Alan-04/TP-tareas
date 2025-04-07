@@ -1,7 +1,5 @@
 const { ComplejidadMinima } = require("./Complejidades");
 
-const VALOR_HORA = 100;
-
 class Tarea {
   constructor(codigo, duracion) {
     this.codigo = codigo;
@@ -21,8 +19,8 @@ class Tarea {
     return this.complejidad.calcularCostoBase(this.duracion);
   }
 
-  mostrarTarea(indent = "") {
-    console.log(`${indent}Codigo: ${this.codigo} - Duración: ${this.duracion} - Costo: $${this.getCosto().toFixed(2)}`);
+  mostrarTarea() {
+    console.log(`Codigo: ${this.codigo} - Duración: ${this.duracion} - Costo: $${this.getCosto().toFixed(2)}`);
   }
 }
 
@@ -51,15 +49,15 @@ class TareaCompuesta {
     var total = costoPropio + costoSubtareas;
 
     if (this.tareas.length > 3) {
-      total *= 1.04; // Overhead del 4%
+      total *= 1.04; 
     }
 
     return total;
   }
 
-  mostrarTarea(indent = "") {
-    console.log(`${indent}Codigo: ${this.codigo} - Duración: ${this.duracion} - Costo: $${this.getCosto().toFixed(2)}`);
-    this.tareas.forEach((t) => t.mostrarTarea(indent + "  "));
+  mostrarTarea() {
+    console.log(`Codigo: ${this.codigo} - Duración: ${this.duracion} - Costo: $${this.getCosto()}`);
+    this.tareas.forEach((t) => t.mostrarTarea("  "));
   }
 }
 
