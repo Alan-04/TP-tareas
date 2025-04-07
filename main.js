@@ -31,4 +31,4 @@ proyecto.agregarTarea(t3);
 
 proyecto.mostrarTareas();
 console.log(`Duración Total: ${proyecto.getDuracion()}`);
-console.log(`Costo Total: $${proyecto.getCostoTotal().toFixed(2)}`);
+console.log(`Costo Total: $${proyecto.getCostoTotal()}`);

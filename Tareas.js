@@ -20,7 +20,7 @@ class Tarea {
   }
 
   mostrarTarea() {
-    console.log(`Codigo: ${this.codigo} - Duración: ${this.duracion} - Costo: $${this.getCosto().toFixed(2)}`);
+    console.log(`Codigo: ${this.codigo} - Duración: ${this.duracion} - Costo: $${this.getCosto()}`);
   }
 }
 
